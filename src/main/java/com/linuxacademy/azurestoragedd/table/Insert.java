@@ -29,7 +29,7 @@ public class Insert {
             //Create an Inventory Item entity to insert.
             InventoryItemEntity item = new InventoryItemEntity("E6704", "Haunted Guitar", "Elanor Mosley", "X32B-02");
             
-            table.execute(TableOperation.insert(item));
+            table.execute(TableOperation.insertOrReplace(item));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
