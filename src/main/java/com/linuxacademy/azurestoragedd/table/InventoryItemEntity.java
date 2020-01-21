@@ -10,11 +10,8 @@ public class InventoryItemEntity extends TableServiceEntity {
     String location;
     
     public InventoryItemEntity(String id, String description, String ownerName, String location) {
-        this.id = id;
         this.rowKey = id;
-        this.description = description;
-        this.ownerName = ownerName;
-        this.location = location;
+        this.partitionKey = location;
     }
 
     public String getId() {
