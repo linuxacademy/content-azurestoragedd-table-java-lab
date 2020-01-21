@@ -9,6 +9,9 @@ public class InventoryItemEntity extends TableServiceEntity {
     String ownerName;
     String location;
     
+    public InventoryItemEntity() {
+    }
+    
     public InventoryItemEntity(String id, String description, String ownerName, String location) {
         this.rowKey = id;
         this.partitionKey = location;
