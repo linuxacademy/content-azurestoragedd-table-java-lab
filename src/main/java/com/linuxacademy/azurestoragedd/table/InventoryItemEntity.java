@@ -1,6 +1,8 @@
 package com.linuxacademy.azurestoragedd.table;
 
-public class InventoryItemEntity {
+import com.microsoft.azure.storage.table.TableServiceEntity;
+
+public class InventoryItemEntity extends TableServiceEntity {
     
     String id;
     String description;
@@ -9,6 +11,7 @@ public class InventoryItemEntity {
     
     public InventoryItemEntity(String id, String description, String ownerName, String location) {
         this.id = id;
+        this.rowKey = id;
         this.description = description;
         this.ownerName = ownerName;
         this.location = location;
